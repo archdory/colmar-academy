@@ -1,0 +1,323 @@
+/* UNIVERSAL STYLES */
+
+html {
+  font-size: 18px;
+  font-family: Helvetica;
+  color: #4D4D4D;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1.3;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+/* HEADER SECTION */
+
+header {
+  display: flex;
+  align-items: center;
+  height: 4rem;
+  padding: 0 1.5rem;
+  background-color: white;
+  font-size: 1.33rem;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+#logo img {
+  height: 3rem;
+}
+
+#logo p {
+  font-weight: bold;
+}
+
+#logo span {
+  color: gray;
+  font-weight: normal;
+}
+
+#menu {
+  display: flex;
+  align-items: center;
+}
+
+li {
+  display: inline;
+  margin-left: 1rem;
+}
+
+li a {
+  text-decoration: none;
+  color: #4D4D4D;
+}
+
+#mobile-menu {
+  display: none;
+}
+
+/* BANNER SECTION */
+
+#banner {
+  display: flex;
+  align-items: center;
+  padding: 2.66rem 2rem;
+  background-color: lightgray;
+}
+
+#banner img {
+  width: 60%;
+  margin-right: 3.66rem;
+}
+
+#slogan {
+  width: 30%;
+}
+
+#slogan h2 {
+  margin-top: 2.5rem;
+}
+
+#button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4D4D4D;
+  color: white;
+  padding: 1rem 0;
+  margin-top: 2.5rem;
+  font-size: 1.33rem;
+  text-decoration: none;
+}
+
+/* SECTION 1 */
+
+#section1 {
+  display: flex;
+  background-color: white;
+}
+
+#quote {
+  margin: 2.66rem 2rem;
+  width: 60%;
+}
+
+#quote img {
+  width: 100%;
+}
+
+#quote h1 {
+  margin: 2rem 0;
+}
+
+#quote span {
+  line-height: 1.6;
+}
+
+#quote p {
+  margin-top: 2.66rem;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+}
+
+#events {
+    border-left: 1.5px solid lightgray;
+    padding-top: 1.33rem;
+    width: 40%;
+}
+
+.event {
+  display: flex;
+  align-items: flex-start;
+  padding: 1.33rem;
+}
+
+.event img {
+  width: 40.5%;
+}
+
+.event div {
+  margin-left: 2rem;
+}
+
+#event-border {
+  border-top: 1.5px solid lightgray;
+  border-bottom: 1.5px solid lightgray;
+}
+
+#event3 {
+  background-color: lightgray;
+}
+
+.event-info h2 {
+  margin-top: 1.66rem;
+}
+
+.event-info p {
+  margin-top: 0.66rem;
+  margin-bottom: 0.66rem;
+  line-height: 1.6;
+}
+
+.event-info a {
+  text-decoration: none;
+}
+
+/* SECTION 2 */
+
+#section2 {
+  padding: 3rem 0;
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#section2 h1 {
+  margin-bottom: 3rem;
+}
+
+.row {
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.33rem;
+}
+
+.course {
+  width: 33%;
+  background-color: white;
+}
+
+.course img {
+  width: 100%;
+}
+
+.course-info {
+  padding: 1rem 2rem 1.5rem 2rem;
+}
+
+.course-info h2 {
+  padding-bottom: 1rem;
+}
+
+.course-info span {
+  color: gray;
+}
+
+.course-info p {
+  padding-top: 1rem;
+  line-height: 1.6;
+  color: gray;
+}
+
+.middle-course {
+  margin: 0 32px;
+}
+
+/* SECTION 3 */
+
+#section3 {
+  padding: 3rem 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#section3 h1 {
+  padding-bottom: 3rem;
+}
+
+#section3-container {
+  display: flex;
+}
+
+#video {
+  margin: 0 2rem 2.66rem 2rem;
+  width: 60%;
+}
+
+#video video {
+  width: 100%;
+}
+
+#video h2 {
+  margin: 1rem 0;
+}
+
+#video p {
+  line-height: 1.6;
+}
+
+#exhibits {
+    width: 40%;
+}
+
+.exhibit {
+  display: flex;
+  align-items: flex-start;
+  padding: 1.33rem;
+}
+
+.exhibit img {
+  width: 40.5%;
+}
+
+.exhibit div {
+  margin-left: 2rem;
+}
+
+#exhibit1 {
+  background-color: lightgray;
+}
+
+.exhibit-info h2 {
+  margin: 1.66rem 0 1rem 0;
+}
+
+.exhibit-info p {
+  line-height: 1.5;
+}
+
+#exhibit1 p {
+  padding-top: 3rem;
+}
+
+#exhibit2 h2 {
+  padding-top: 2.5rem;
+}
+
+/* FOOTER SECTION */
+
+footer {
+  display: flex;
+  font-size: 0.9rem;
+  border-top: 1px solid lightgray;
+  padding: 0 2rem;
+  height: 5.5rem;
+}
+
+footer span {
+  flex-grow: 1;
+  margin-top: 1.5rem;
+}
+
+footer ul {
+  margin-top: 1.5rem;
+}
+
+footer li {
+  display: inline;
+}
