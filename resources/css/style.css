@@ -3,7 +3,6 @@
 html {
   font-size: 18px;
   font-family: Helvetica;
-  color: #4D4D4D;
 }
 
 h1 {
@@ -25,8 +24,11 @@ header {
   align-items: center;
   height: 4rem;
   padding: 0 1.5rem;
-  background-color: white;
+  background-color: rgb(102, 109, 232);
   font-size: 1.33rem;
+  border-bottom: 2px solid rgb(205, 195, 255);
+  position: fixed;
+  width: 100%;
 }
 
 #logo {
@@ -41,10 +43,12 @@ header {
 
 #logo p {
   font-weight: bold;
+  color: black;
+  text-decoration: underline white;
 }
 
 #logo span {
-  color: gray;
+  color: white;
   font-weight: normal;
 }
 
@@ -53,18 +57,52 @@ header {
   align-items: center;
 }
 
-li {
+#menu ul {
+  margin-right: 3rem;
+}
+
+#menu li {
   display: inline;
   margin-left: 1rem;
 }
 
-li a {
+#menu a {
   text-decoration: none;
-  color: #4D4D4D;
+  color: white;
+}
+
+#menu a:hover {
+  text-decoration: underline;
 }
 
 #mobile-menu {
   display: none;
+}
+
+@media only screen and (max-width: 480px) {
+  header {
+    position: static;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  #logo {
+    display: none;
+  }
+
+  #mobile-menu {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 3rem;
+  }
+
+  #mobile-menu img {
+    height: 2.33rem;
+  }
 }
 
 /* BANNER SECTION */
@@ -72,8 +110,8 @@ li a {
 #banner {
   display: flex;
   align-items: center;
-  padding: 2.66rem 2rem;
-  background-color: lightgray;
+  padding: 6.66rem 2rem 2.66rem 2rem;
+  background-color: rgb(132, 195, 232);
 }
 
 #banner img {
@@ -83,6 +121,8 @@ li a {
 
 #slogan {
   width: 30%;
+  background-color: #f3f3f3;
+  padding: 1rem;
 }
 
 #slogan h2 {
@@ -93,24 +133,66 @@ li a {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #4D4D4D;
+  background-color: rgb(7, 104, 232);
   color: white;
   padding: 1rem 0;
   margin-top: 2.5rem;
   font-size: 1.33rem;
   text-decoration: none;
+  border-radius: 10px;
+}
+
+#button:hover {
+  background-color: rgb(102, 109, 232);
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 480px) {
+  #banner {
+    padding: 0;
+    flex-direction: column;
+  }
+
+  #banner img {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  #slogan {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(132, 195, 232);
+    color: white;
+    padding-bottom: 2rem;
+  }
+
+  #slogan h1 {
+    padding: 0 1rem;
+  }
+
+  #slogan h2 {
+    padding: 0 1rem;
+  }
+
+  #button {
+    width: 90%;
+  }
 }
 
 /* SECTION 1 */
 
 #section1 {
   display: flex;
-  background-color: white;
+  background-color: #f3f3f3;
 }
 
 #quote {
   margin: 2.66rem 2rem;
   width: 60%;
+  background-color: white;
 }
 
 #quote img {
@@ -119,28 +201,35 @@ li a {
 
 #quote h1 {
   margin: 2rem 0;
+  padding: 0 1.4rem;
 }
 
-#quote span {
+#paragraph {
   line-height: 1.6;
+  padding: 0 1.4rem;
 }
 
-#quote p {
+#author {
   margin-top: 2.66rem;
   margin-bottom: 2rem;
   font-size: 0.9rem;
+  padding: 0 1.4rem;
 }
 
-#events {
-    border-left: 1.5px solid lightgray;
-    padding-top: 1.33rem;
+#events-browser {
+    padding: 2.66rem 0;
     width: 40%;
+    height: 100%;
 }
 
 .event {
   display: flex;
   align-items: flex-start;
   padding: 1.33rem;
+}
+
+.event:hover {
+  background-color: white;
 }
 
 .event img {
@@ -154,10 +243,6 @@ li a {
 #event-border {
   border-top: 1.5px solid lightgray;
   border-bottom: 1.5px solid lightgray;
-}
-
-#event3 {
-  background-color: lightgray;
 }
 
 .event-info h2 {
@@ -174,11 +259,53 @@ li a {
   text-decoration: none;
 }
 
+.event-info a:hover {
+  text-decoration: underline;
+}
+
+#events-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 480px) {
+  #section1 {
+    padding-bottom: 1rem;
+  }
+
+  #quote {
+    display: none;
+  }
+
+  #events-browser {
+    display: none;
+  }
+
+  #events-mobile {
+    display: block;
+    padding-top: 1.33rem;
+  }
+
+  #events {
+    padding: 0;
+    width: 100;
+  }
+
+  .event {
+    flex-direction: column;
+    width: 100%;
+    padding-top: 0;
+  }
+
+  .event img {
+    width: 90%;
+  }
+}
+
 /* SECTION 2 */
 
 #section2 {
   padding: 3rem 0;
-  background-color: lightgray;
+  background-color: rgb(132, 195, 232);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -186,6 +313,7 @@ li a {
 
 #section2 h1 {
   margin-bottom: 3rem;
+  color: white;
 }
 
 .row {
@@ -212,6 +340,11 @@ li a {
   padding-bottom: 1rem;
 }
 
+.course-info a {
+  text-decoration: none;
+  color: black;
+}
+
 .course-info span {
   color: gray;
 }
@@ -226,11 +359,65 @@ li a {
   margin: 0 32px;
 }
 
+@media only screen and (max-width: 480px) {
+  #section2 {
+    padding: 1.66rem 0 2rem 0;
+  }
+
+  #section2 h1 {
+    margin-bottom: 2rem;
+  }
+
+  .course img {
+    display: none;
+  }
+
+  .course-info span{
+    display: none;
+  }
+
+  .course-info p {
+    display: none;
+  }
+
+  .row {
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+  }
+
+  .course {
+    width: 100%;
+  }
+
+  .course-info {
+    width: 82%;
+    padding-bottom: 1rem;
+  }
+
+  .course-info:hover {
+    background-color: rgb(7, 104, 232);
+    color: white;
+  }
+
+  .course-info:hover a {
+    text-decoration: underline;
+    color: white;
+  }
+
+  .course-info h2 {
+    padding: 0;
+  }
+
+  .middle-course {
+    margin: 0.5rem 0;
+  }
+}
+
 /* SECTION 3 */
 
 #section3 {
-  padding: 3rem 0;
-  background-color: white;
+  padding: 3rem 0 1rem 0;
+  background-color: #f3f3f3;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -247,6 +434,7 @@ li a {
 #video {
   margin: 0 2rem 2.66rem 2rem;
   width: 60%;
+  background-color: white;
 }
 
 #video video {
@@ -255,20 +443,27 @@ li a {
 
 #video h2 {
   margin: 1rem 0;
+  padding: 0 1.4rem;
 }
 
 #video p {
   line-height: 1.6;
+  padding: 0 1.4rem 2rem 1.4rem;
 }
 
 #exhibits {
     width: 40%;
+    margin-bottom: 4rem;
 }
 
 .exhibit {
   display: flex;
   align-items: flex-start;
   padding: 1.33rem;
+}
+
+.exhibit:hover {
+  background-color: white;
 }
 
 .exhibit img {
@@ -280,7 +475,7 @@ li a {
 }
 
 #exhibit1 {
-  background-color: lightgray;
+  border-bottom: 1.5px solid lightgray;
 }
 
 .exhibit-info h2 {
@@ -299,6 +494,32 @@ li a {
   padding-top: 2.5rem;
 }
 
+@media only screen and (max-width: 480px) {
+  #section3 {
+    padding-top: 2rem;
+    padding-bottom: 0;
+  }
+
+  #section3 h1 {
+    padding-bottom: 2rem;
+  }
+
+  #exhibits {
+    display: none;
+  }
+
+  #video h2,
+  #video p {
+    display: none;
+  }
+
+  #video {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
 /* FOOTER SECTION */
 
 footer {
@@ -307,11 +528,13 @@ footer {
   border-top: 1px solid lightgray;
   padding: 0 2rem;
   height: 5.5rem;
+  background-color: rgb(7, 104, 232);
 }
 
 footer span {
   flex-grow: 1;
   margin-top: 1.5rem;
+  color: white;
 }
 
 footer ul {
@@ -320,4 +543,28 @@ footer ul {
 
 footer li {
   display: inline;
+  margin-left: 1rem;
+}
+
+footer li a {
+  text-decoration: none;
+  color: white;
+}
+
+footer li a:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 480px) {
+  footer {
+    align-items: center;
+  }
+
+  footer span {
+    margin-top: 0;
+  }
+
+  footer ul {
+    display: none;
+  }
 }
